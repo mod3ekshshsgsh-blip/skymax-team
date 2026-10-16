@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <!-- Accent Header Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero_gradient"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_secondary_subtle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_smart_display"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="AI CONTENT STUDIO"
+                    android:textColor="@color/primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Create Content"
+                android:textColor="@color/text_white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Choose what you want AI to create."
+                android:textColor="@color/on_surface_variant"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Form Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Content Type Selector (5 columns) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Content Type"
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_selected_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected: YouTube Script"
+                    android:textColor="@color/primary"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- 5 Content Type Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btn_type_yt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_highest"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_smart_display"
+                        app:tint="@color/text_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="YT Script"
+                        android:textColor="@color/text_white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_type_social"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_tag"
+                        app:tint="@color/text_muted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Social"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_type_blog"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_article"
+                        app:tint="@color/text_muted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Blog"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_type_email"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_mail"
+                        app:tint="@color/text_muted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Email"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_type_adcopy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_campaign"
+                        app:tint="@color/text_muted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Ad Copy"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Topic / Working Title Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Topic / Working Title"
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required"
+                    android:textColor="@color/outline"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_generator_topic"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="e.g. Next-Gen Smartphone Review"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/text_white"
+                android:textColorHint="@color/text_muted"
+                android:textSize="14sp" />
+
+            <!-- Description / Creative Brief -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description / Creative Brief"
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/btn_inspire_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_magic_button"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="Inspire Me"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field">
+
+                <EditText
+                    android:id="@+id/et_generator_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="top|start"
+                    android:hint="Describe the key points, angle, and details you want included..."
+                    android:padding="12dp"
+                    android:textColor="@color/text_white"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_brief_char_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"
+                    android:text="0/500"
+                    android:textColor="@color/outline"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <!-- Voice & Tone Chips -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Voice &amp; Tone"
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select one"
+                    android:textColor="@color/outline"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layout_tone_chips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chip_tone_prof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_chip_selected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Professional"
+                        android:textColor="@color/text_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/chip_tone_friendly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Friendly"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chip_tone_casual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Casual"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chip_tone_funny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Funny"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chip_tone_persuasive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Persuasive"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chip_tone_marketing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_chip_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="14dp"
+                        android:text="Marketing"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Language and Length Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!-- Language Selector -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Language"
+                        android:textColor="@color/text_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:paddingHorizontal="8dp" />
+                </LinearLayout>
+
+                <!-- Length Target Selector -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Length Target"
+                        android:textColor="@color/text_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_input_field"
+                        android:paddingHorizontal="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Keywords Tag Input Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Focus Keywords"
+                    android:textColor="@color/text_white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to remove"
+                    android:textColor="@color/outline"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tags_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tag_pill_tech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_tag_pill"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="#tech ✕"
+                    android:textColor="@color/text_white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tag_pill_unboxing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_tag_pill"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="#unboxing ✕"
+                    android:textColor="@color/text_white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tag_pill_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_tag_pill"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:text="#camera ✕"
+                    android:textColor="@color/text_white"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/et_keyword_add"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="+ Add tag..."
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColor="@color/text_white"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Fast Track Engine Info Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card_high"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_pill_secondary_subtle">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bolt"
+                        app:tint="@color/secondary" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Turbo Fast Engine"
+                        android:textColor="@color/text_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="v4.2 Ultra Production"
+                        android:textColor="@color/outline"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAST TRACK"
+                    android:textColor="@color/secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Generate With AI Primary CTA Button -->
+            <Button
+                android:id="@+id/btn_generate_submit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_primary"
+                android:drawableStart="@drawable/ic_auto_awesome"
+                android:paddingHorizontal="24dp"
+                android:text="GENERATE WITH AI"
+                android:textColor="@color/text_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Subtext: Credits tip -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_generator_credit_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Using 1 of 5 daily AI Credits. • "
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/btn_generator_pro_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pro users get unlimited →"
+                    android:textColor="@color/secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Loading Spinner -->
+            <ProgressBar
+                android:id="@+id/progress_generating"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:indeterminateTint="@color/primary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

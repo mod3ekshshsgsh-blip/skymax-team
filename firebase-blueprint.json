@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "path": "users/{userId}",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "isPro": { "type": "boolean" },
+        "creditsRemaining": { "type": "number" },
+        "maxDailyCredits": { "type": "number" },
+        "createdAt": { "type": "number" }
+      }
+    },
+    "Creation": {
+      "collection": "creations",
+      "path": "users/{userId}/creations/{creationId}",
+      "fields": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "contentType": { "type": "string" },
+        "content": { "type": "string" },
+        "wordCount": { "type": "number" },
+        "dateFormatted": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "isFavorite": { "type": "boolean" },
+        "subtitle": { "type": "string" },
+        "tags": { "type": "string" }
+      }
+    },
+    "Template": {
+      "collection": "templates",
+      "path": "templates/{templateId}",
+      "fields": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "isPro": { "type": "boolean" },
+        "defaultTopic": { "type": "string" },
+        "defaultBrief": { "type": "string" },
+        "defaultTone": { "type": "string" }
+      }
+    }
+  }
+}

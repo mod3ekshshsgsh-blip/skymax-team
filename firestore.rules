@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidUser() {
+      return request.resource.data.keys().hasAll(['email']) &&
+             request.resource.data.email is string;
+    }
+
+    function isValidCreation() {
+      return request.resource.data.keys().hasAll(['title', 'contentType', 'content']) &&
+             request.resource.data.title is string &&
+             request.resource.data.title.size() > 0 &&
+             request.resource.data.title.size() <= 300 &&
+             request.resource.data.contentType is string &&
+             request.resource.data.content is string;
+    }
+
+    // User profile document
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && isValidUser();
+      allow delete: if isOwner(userId);
+
+      // User's private creations subcollection
+      match /creations/{creationId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidCreation();
+        allow delete: if isOwner(userId);
+      }
+    }
+
+    // Curated Templates (Read-only for authenticated creators)
+    match /templates/{templateId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // Global deny-all fallback
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background & Canvas -->
+    <color name="bg_surface">#131313</color>
+    <color name="surface_container_lowest">#0E0E0E</color>
+    <color name="surface_container_low">#1C1B1B</color>
+    <color name="surface_container">#201F1F</color>
+    <color name="surface_container_high">#2A2A2A</color>
+    <color name="surface_container_highest">#353534</color>
+    
+    <!-- Primary Burgundy -->
+    <color name="primary">#FFB2BB</color>
+    <color name="primary_container">#A9003D</color>
+    <color name="primary_container_dark">#7D002D</color>
+    <color name="primary_container_deep">#4A001C</color>
+    <color name="on_primary">#670022</color>
+    <color name="on_primary_container">#FFB4BD</color>
+    
+    <!-- Secondary Gold / Accent -->
+    <color name="secondary">#E9C349</color>
+    <color name="secondary_gold">#D4AF37</color>
+    <color name="secondary_container">#AF8D11</color>
+    <color name="secondary_container_subtle">#33AF8D11</color>
+    <color name="on_secondary">#3C2F00</color>
+    <color name="secondary_fixed">#FFE088</color>
+    
+    <!-- Tertiary & Accents -->
+    <color name="tertiary">#FFB2BC</color>
+    <color name="tertiary_container">#9E2143</color>
+    <color name="on_tertiary">#670024</color>
+    
+    <!-- Text & Content -->
+    <color name="on_surface">#E5E2E1</color>
+    <color name="on_surface_variant">#E2BEC1</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_muted">#A6A6A6</color>
+    
+    <!-- Outlines & Borders -->
+    <color name="outline">#A9898C</color>
+    <color name="outline_border">#363636</color>
+    <color name="outline_variant">#5A4043</color>
+    
+    <!-- Status & Alerts -->
+    <color name="error">#FFB4AB</color>
+    <color name="error_container">#93000A</color>
+    <color name="success">#4CAF50</color>
+    <color name="success_container">#1B5E20</color>
+    
+    <!-- Standard & Transparents -->
+    <color name="transparent">#00000000</color>
+    <color name="overlay_black_50">#80000000</color>
+</resources>

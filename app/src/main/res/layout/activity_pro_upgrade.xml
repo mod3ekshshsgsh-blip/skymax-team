@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/btn_pro_back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_white" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_app_logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Pro Upgrade"
+                android:textColor="@color/text_white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_tag_pill"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_avatar_alex" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="28dp">
+
+            <!-- Hero Accent Banner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_hero_gradient"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_secondary_subtle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_workspace_premium"
+                        app:tint="@color/secondary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="AI CREATOR PRO"
+                        android:textColor="@color/secondary"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Create more.\nWork faster."
+                    android:textColor="@color/text_white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Unlock unlimited high-power AI content creation without limits."
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Pro Power Features Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_card_high"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pro Power Features"
+                        android:textColor="@color/text_white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_pill_secondary_subtle"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="All Included"
+                        android:textColor="@color/secondary"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Feature 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unlimited AI generations"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bypass the standard 5/day cap completely"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Feature 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Advanced models &amp; deep research"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Multi-source reasoning and prioritized inference"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Feature 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No ads or throttled speeds"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lightning-fast priority GPU token processing"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Feature 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200+ Premium Pro Templates"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Production-ready studio pipelines and prompts"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Feature 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_check_circle" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Long-form generation up to 5,000 words"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Full scripts, reports, and continuous narrative flow"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Subscription Plan Selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <!-- Plan 1: Monthly -->
+                <LinearLayout
+                    android:id="@+id/plan_card_monthly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_monthly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/primary"
+                        android:clickable="false" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Standard billing"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$14.99"
+                            android:textColor="@color/text_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/ month"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Plan 2: Yearly (Best Value) -->
+                <FrameLayout
+                    android:id="@+id/plan_card_yearly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:id="@+id/layout_yearly_inner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_card_highest"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_yearly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/primary"
+                            android:checked="true"
+                            android:clickable="false" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yearly"
+                                android:textColor="@color/text_white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Billed $119.88 / year"
+                                android:textColor="@color/primary"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$9.99"
+                                android:textColor="@color/text_white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/ month"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Save 33% Badge -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/bg_pill_pro"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="BEST VALUE • SAVE 33%"
+                        android:textColor="@color/on_secondary"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <!-- Plan 3: Lifetime VIP -->
+                <LinearLayout
+                    android:id="@+id/plan_card_lifetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_card_high"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_lifetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/primary"
+                        android:clickable="false" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lifetime VIP"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="One-time payment"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$249"
+                            android:textColor="@color/secondary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="forever"
+                            android:textColor="@color/on_surface_variant"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Upgrade Button -->
+            <Button
+                android:id="@+id/btn_pro_upgrade_submit"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_primary"
+                android:drawableStart="@drawable/ic_bolt"
+                android:paddingHorizontal="24dp"
+                android:text="UPGRADE TO PRO"
+                android:textColor="@color/text_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Restore Purchases -->
+            <Button
+                android:id="@+id/btn_restore_purchases"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/transparent"
+                android:text="Restore Purchases"
+                android:textAllCaps="false"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="12sp" />
+
+            <!-- Security Footer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_security"
+                    app:tint="@color/secondary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="7-day money-back guarantee"
+                    android:textColor="@color/text_white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="Cancel anytime in Google Play Store. Secured checkout."
+                android:textColor="@color/text_muted"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

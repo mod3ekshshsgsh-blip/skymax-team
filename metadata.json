@@ -1,0 +1,6 @@
+{
+  "name": "AI Creator",
+  "description": "AI Creator empowers creators and marketers to generate high-converting video scripts, social captions, blogs, and marketing copy with ease.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
